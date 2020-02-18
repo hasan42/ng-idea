@@ -1,0 +1,25 @@
+<div class="form">
+  <p>Create new user</p>
+  <form novalidate>
+    <div class="form__item">
+      <input [(ngModel)]="form.name"
+          name="name"
+          type="text"
+          required
+          placeholder="Enter name"
+          #name="ngModel"/>
+    </div>
+    <div class="form__item">
+      <input [(ngModel)]="form.password"
+          name="password"
+          type="text"
+          required
+          placeholder="Enter password"
+          #password="ngModel"/>
+    </div>
+    <div class="form__item">
+      <button (click)="add()"><fa-icon [icon]="faPlus"></fa-icon> Create</button>
+    </div>
+  </form>
+  <div>{{validMsg}}</div>
+</div>

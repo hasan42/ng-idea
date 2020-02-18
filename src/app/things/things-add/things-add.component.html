@@ -1,0 +1,24 @@
+<div class="form">
+  <p>Add your new thing.</p>
+  <form novalidate>
+    <div class="form__item">
+      <input [(ngModel)]="form.name"
+          name="name"
+          type="text"
+          required
+          placeholder="Enter name"
+          #name="ngModel"/>
+    </div>
+    <div class="form__item">
+      <textarea [(ngModel)]="form.text"
+          name="text"
+          required
+          placeholder="Enter text"
+          #text="ngModel"></textarea> 
+    </div>
+    <div class="form__item">
+      <button (click)="add()"><fa-icon [icon]="faPlus"></fa-icon> create</button>
+    </div>
+  </form>
+  <div>{{validMsg}}</div>
+</div>

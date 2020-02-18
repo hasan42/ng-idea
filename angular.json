@@ -25,6 +25,9 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
+              "src/config.php",
+              "src/users.php",
+              "src/things.php",
               "src/assets"
             ],
             "styles": [

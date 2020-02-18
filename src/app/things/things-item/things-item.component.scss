@@ -1,0 +1,19 @@
+.things-item {
+  margin: 20px 0;
+  border-bottom: 3px solid #000;
+}
+.things-item__head {
+  display: flex;
+  justify-content: space-between;
+  h4 {
+    margin: 0;
+    span {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}
+.things-item__body {
+  margin: 10px 0 20px;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,6 @@
+<div>
+  <h3>Things list</h3>
+  <ng-container *ngFor="let item of items; index as i; first as first; last as last">
+    <app-things-item [id]="item.id" [name]="item.name" [text]="item.text"></app-things-item>
+  </ng-container>
+</div>

@@ -1,0 +1,25 @@
+<div class="form">
+  <form novalidate>
+    <div class="form__item">
+      <input [(ngModel)]="form.name"
+            name="name"
+            type="text"
+            required
+            placeholder="Enter name"
+            #name="ngModel"/>
+    </div>
+    <div class="form__item">
+      <input [(ngModel)]="form.password"
+            name="password"
+            type="text"
+            required
+            placeholder="Enter password"
+            #password="ngModel"/>
+    </div>
+    <div class="form__item">
+      <button (click)="login()"><fa-icon [icon]="faSignInAlt"></fa-icon> login</button>
+    </div>
+  </form>
+  <div>{{validMsg}}</div>
+  <div>{{loginId}}</div>
+</div>

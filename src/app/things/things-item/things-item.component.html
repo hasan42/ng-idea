@@ -1,0 +1,13 @@
+<div class="things-item">
+  <div class="things-item__head">
+    <div>
+      <h4><span>{{id}}</span> {{name}}</h4>
+    </div>
+    <div>
+      <button (click)="delIt(id)"><fa-icon [icon]="faTrashAlt"></fa-icon> delete</button>
+    </div>
+  </div>
+  <div class="things-item__body" [innerHTML]="text">
+    <ng-content ></ng-content>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="user-list mt-20">
+  <p class="mt-0">List of current users.</p>
+  <div class="user-list__head">
+  	<div>id</div>
+  	<div>name</div>
+  	<div>password</div>
+  	<div>admin</div>
+  	<div></div>
+  </div>
+  <ng-container *ngFor="let item of items; index as i; first as first; last as last">
+    <app-user-item [id]="item.id" [name]="item.name" [password]="item.password" [admin]="item.admin"></app-user-item>
+  </ng-container>
+</div>
