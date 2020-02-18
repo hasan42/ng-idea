@@ -34,12 +34,12 @@ body {
 .form {}
 .form__item {
   padding: 5px 0;
-  input[type="text"], textarea, button {
+  input[type="text"],input[type="password"], textarea, button {
     display: block;
     width: 100%;
   }
 }
-input[type="text"]{
+input[type="text"],input[type="password"]{
   padding: 5px 7px;
   border: $border-input;
 }

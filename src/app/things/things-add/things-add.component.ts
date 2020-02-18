@@ -35,6 +35,10 @@ export class ThingsAddComponent implements OnInit {
 
       this.service.addItem(this.form.name, this.form.text)
       this.validMsg = 'saved!'
+      this.form = {
+        name: '',
+        text: '',
+      };
     }catch(error){
       this.validMsg = 'error: ' + error.message
     }

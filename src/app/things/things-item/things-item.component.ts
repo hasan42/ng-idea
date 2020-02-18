@@ -20,7 +20,9 @@ export class ThingsItemComponent implements OnInit {
   }
 
   delIt(id){
-    this.service.deleteItems(id);
+    if(confirm("Delete item?")){
+      this.service.deleteItems(id);
+    }
   }
 
 }

@@ -12,15 +12,18 @@ export class UserItemComponent implements OnInit {
   @Input() id: number;
   @Input() name: string;
   @Input() password: string;
-  @Input() admin: boolean;
+  @Input() admin: any;
 
   constructor(private service: UserService) { }
 
   ngOnInit() {
+    this.admin = this.admin == '1' ? true : false;
   }
 
   delIt(id){
-    this.service.deleteUser(id);
+    if(confirm("Delete item?")){
+      this.service.deleteUser(id);
+    }
   }
 
 }

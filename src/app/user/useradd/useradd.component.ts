@@ -35,6 +35,10 @@ export class UserAddComponent implements OnInit {
 
       this.service.addUser(this.form.name, this.form.password)
       this.validMsg = 'saved!'
+      this.form = {
+        name: '',
+        password: '',
+      };
     }catch(error){
       this.validMsg = 'error: ' + error.message
     }

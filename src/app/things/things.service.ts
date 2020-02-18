@@ -37,7 +37,6 @@ export class ThingsService {
         return a.id - b.id
       })
       this.items = value;
-      console.log(this.items);
       this.observableItems.next(this.items);
     },
     error => {
