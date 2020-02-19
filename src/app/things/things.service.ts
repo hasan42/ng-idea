@@ -90,6 +90,27 @@ export class ThingsService {
     });
   }
 
+  editItem(id, name,text){
+    // let maxId = Math.max.apply(Math, this.items.map(item => item.id));
+    // maxId = maxId == -Infinity ? 0 : maxId;
+    // let obj = { id: maxId+1, name: name, text: text, authorId: this.userId };
+    // this.items.push(obj);
+    // this.filterItems(this.userId, this.userAdmin)
+
+    let formData = new FormData();
+    formData.append('actions', 'edit');
+    formData.append('id', id);
+    formData.append('name', name);
+    formData.append('text', text);
+
+    this.http.post(this.linkPhp, formData,{responseType: 'text'}).subscribe((value : any) =>{
+      this.getItemsRemote(this.userId);
+    },
+    error => {
+      console.log(error)
+    });
+  }
+
   deleteItems(id){
     // let el = this.items.findIndex(item => item.id === id);
     // this.items.splice(el, 1);

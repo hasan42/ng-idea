@@ -1,13 +1,34 @@
-<div class="things-item">
+<div class="things-item" *ngIf="!editMode">
   <div class="things-item__head">
-    <div>
-      <h4><span>{{id}}</span> {{name}}</h4>
-    </div>
-    <div>
-      <button (click)="delIt(id)"><fa-icon [icon]="faTrashAlt"></fa-icon> delete</button>
-    </div>
+    <h4><span>{{id}}</span> {{name}}</h4>
   </div>
   <div class="things-item__body" [innerHTML]="text">
     <ng-content ></ng-content>
+  </div>
+  <div class="things-item__control">
+    <button (click)="editIt()"><fa-icon [icon]="faEdit"></fa-icon> edit</button>
+    <button (click)="delIt(id)"><fa-icon [icon]="faTrashAlt"></fa-icon> delete</button>
+  </div>
+</div>
+
+<div class="things-item" *ngIf="editMode">
+  <div class="things-item__head">
+    <input [(ngModel)]="form.name"
+          name="name"
+          type="text"
+          required
+          placeholder="Enter name"
+          #name="ngModel"/>
+  </div>
+  <div class="things-item__body">
+    <textarea [(ngModel)]="form.text"
+              name="text"
+              required
+              placeholder="Enter text"
+              #text="ngModel"></textarea>
+  </div>
+  <div class="things-item__control">
+    <button (click)="saveEdit()"><fa-icon [icon]="faSave"></fa-icon> save</button>
+    <button (click)="editIt()"><fa-icon [icon]="faBan"></fa-icon> cancel</button>
   </div>
 </div>

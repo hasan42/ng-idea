@@ -15,6 +15,12 @@ switch ($method) {
       $author = $_POST["author"];
       $sql = "insert into things (id, name, text, author) values (NULL, '$name', '$text', '$author')"; 
 
+    }elseif($_POST["actions"] == 'edit'){
+
+      $id = $_POST["id"];
+      $newname = $_POST["name"];
+      $newtext = $_POST["text"];
+      $sql = "update things set name='$newname', text='$newtext' where id=$id"; 
     }
     break;
   case 'DELETE':
