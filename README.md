@@ -13,14 +13,14 @@ Backend: PHP и БД MySQL.
 
 Тестовые пользователи.
 `{
-  name:qwerty
-  password:qwerty
-  admin:1
+  name : qwerty,
+  password : qwerty,
+  admin : 1
 },
 {
-  name:qwe,
-  password:qwe,
-  admin:0
+  name : qwe,
+  password : qwe,
+  admin : 0
 }`
 
 Залогиненый пользователей:
