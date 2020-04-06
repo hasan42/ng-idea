@@ -2,28 +2,33 @@
 
 [DEMO](http://ng-idea.irustam.ru/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+Приложение на Angular.
 
-## Development server
+Стили в SCSS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Backend: PHP и БД MySQL.
 
-## Code scaffolding
+### Описание
+На главной странице отображается форма входа.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Тестовые пользователи.
+`{
+  name:qwerty
+  password:qwerty
+  admin:1
+},
+{
+  name:qwe,
+  password:qwe,
+  admin:0
+}`
 
-## Build
+Залогиненый пользователей:
+- видит список своих постов;
+- может создать новый;
+- удалить существующий;
+- редактировать - появляется форма с возможностью сохранить или отменить (убирает форму и не сохраняет изменения).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Пользовователь `admin` дополнительно может:
+- добавлять новых пользователей;
+- удалять остальных "не админов".
